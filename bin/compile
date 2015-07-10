@@ -102,10 +102,10 @@ cp -R $VENDOR_DIR/R /app/vendor/R
 
 echo "Stuff copied" | indent
 
-apt-get download libcairo2-dev
-dpkg -X libcairo2-dev_1.13.0~20140204-0ubuntu1.1_amd64.deb $HOME/cairo
-export CAIRO_CFLAGS="-I$HOME/cairo/usr/include/cairo/"
-export CAIRO_LIBS="$HOME/cairo/usr/lib/x86_64-linux-gnu/"
+#apt-get download libcairo2-dev
+#dpkg -X libcairo2-dev_1.13.0~20140204-0ubuntu1.1_amd64.deb $HOME/cairo
+#export CAIRO_CFLAGS="-I$HOME/cairo/usr/include/cairo/"
+#export CAIRO_LIBS="$HOME/cairo/usr/lib/x86_64-linux-gnu/"
 
 # R needs to know where gfortran and glibc header files are
 export PATH=/app/vendor/R/bin:/app/vendor/gcc-$GCC_VERSION/bin:$PATH
