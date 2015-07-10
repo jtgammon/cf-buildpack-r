@@ -102,7 +102,7 @@ cp -R $VENDOR_DIR/R /app/vendor/R
 echo "Stuff copied" | indent
 
 apt-get download libcairo2-dev
-dpkg -X libcairo2-dev_1.13.0~20140204ubuntu1.1_amd64.deb $HOME/cairo
+dpkg -X libcairo2-dev_1.13.0~20140204-0ubuntu1.1_amd64.deb $HOME/cairo
 export CAIRO_CFLAGS="-I$HOME/cairo/usr/include"
 export CAIRO_LIBS="-L$HOME/cairo/usr/lib"
 
