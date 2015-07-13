@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-cat <<EOF
-default_process_types:
-  web: R < /app/startShiny.R  --no-save
-EOF
+R < /app/startShiny.R  --no-save
