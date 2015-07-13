@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-R < "print("Hello from release")"  --no-save
+R --no-save < "print("Hello from release")"
