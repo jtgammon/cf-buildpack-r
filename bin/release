@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
+export PATH=/app/vendor/R/bin:/app/vendor/gcc-$GCC_VERSION/bin:$PATH
 export LD_LIBRARY_PATH="/lib:/usr/lib:/usr/lib/x86_64-linux-gnu:$R_HOME/lib64:$LD_LIBRARY_PATH"
 
-/app/vendor/R/bin/R --version
+R --version
