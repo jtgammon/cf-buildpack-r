@@ -26,8 +26,8 @@ R_BINARIES="https://s3.amazonaws.com/r-buildpack/R-3.1.0-binaries-20140629-2201.
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
 mkdir -p $CACHE_DIR
 
-export VENDOR_DIR=/home/vcap/app/vendor
-export R_HOME=/home/vcap/app/vendor/R
+export VENDOR_DIR=/app/vendor
+export R_HOME=/app/vendor/R
 
 mkdir -p $VENDOR_DIR
 curl $R_BINARIES -s -o r_binaries.tar.gz
@@ -61,8 +61,8 @@ cp "$BUILDPACK_DIR/bin/r_environment.sh" $BUILD_DIR/.profile.d/r_environment.sh
 
 
 # prevent warnings
-mkdir -p /app/vendor/R/lib64/R/doc/html
-touch /app/vendor/R/lib64/R/doc/html/R.css
+# mkdir -p /app/vendor/R/lib64/R/doc/html
+# touch /app/vendor/R/lib64/R/doc/html/R.css
 
 # set the CRAN mirror and run the init.r program
 R -s <<RPROG
